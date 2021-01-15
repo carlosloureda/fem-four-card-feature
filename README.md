@@ -112,4 +112,9 @@ The designs were created to the following widths:
 
 - [Margin vs Padding](https://blog.hubspot.com/website/css-margin-vs-padding#:~:text=What's%20the%20Difference%20Between%20Margin,and%20the%20content%20inside%20it.&text=In%20creating%20the%20gap%2C%20the,the%20border%20of%20an%20element.)
 
-- [How to make text fit a line](https://css-tricks.com/fitting-text-to-a-container/)
+- [How to add line break with CSS](https://www.designcise.com/web/tutorial/how-to-add-a-line-break-to-an-html-element-using-css-only)
+
+# Todos
+
+- Animations
+- Rems

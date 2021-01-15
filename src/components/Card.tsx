@@ -25,7 +25,7 @@ S.Card = styled.section`
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 
   @media (min-width: 376px) {
-    width: 350px;
+    max-width: 350px;
     height: 250px;
   }
 

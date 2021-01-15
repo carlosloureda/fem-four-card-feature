@@ -45,26 +45,53 @@ S.Section = styled.section`
   align-items: center;
   padding: 87px 27px 27px 27px;
   .header {
+    // desktop
+    max-width: 540px;
+
+    text-align: center;
+
     margin-bottom: 87px;
 
     &--title {
       font-size: 24px;
       line-height: 36px;
       font-weight: 200;
+
+      @media (min-width: 376px) {
+        font-size: 36px;
+        line-height: 54px;
+      }
+
       &__highlighted {
         font-weight: 600;
         font-size: 24px;
         line-height: 36px;
         display: block;
+        @media (min-width: 376px) {
+          font-size: 36px;
+          line-height: 54px;
+        }
       }
     }
     &--subtitle {
       font-weight: 200;
       font-size: 15px;
       line-height: 25px;
-      text-align: center;
       padding-top: 16px;
     }
+  }
+`;
+
+S.CardsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 87px 27px 27px 27px;
+
+  @media (min-width: 376px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 `;
 
@@ -83,7 +110,9 @@ const CardsSection = () => {
           points to ensure that your project is successful
         </p>
       </div>
-      {cards && cards.map((card) => <Card key={card.title} card={card} />)}
+      <S.CardsSection>
+        {cards && cards.map((card) => <Card key={card.title} card={card} />)}
+      </S.CardsSection>
     </S.Section>
   );
 };
