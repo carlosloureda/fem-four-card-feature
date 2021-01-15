@@ -103,3 +103,13 @@ The designs were created to the following widths:
 
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 200, 400, 600
+
+# Doubts
+
+- How to make the div elements adjust wiht min and max width and responsiveness
+
+# Resources
+
+- [Margin vs Padding](https://blog.hubspot.com/website/css-margin-vs-padding#:~:text=What's%20the%20Difference%20Between%20Margin,and%20the%20content%20inside%20it.&text=In%20creating%20the%20gap%2C%20the,the%20border%20of%20an%20element.)
+
+- [How to make text fit a line](https://css-tricks.com/fitting-text-to-a-container/)
