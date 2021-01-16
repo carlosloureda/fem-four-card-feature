@@ -54,6 +54,7 @@ interface iCard {
   description: string;
   caption: string;
   color: string;
+  altText?: string;
 }
 
 interface iCardProps {
@@ -76,7 +77,7 @@ const Card: React.FC<iCardProps> = ({ card }: { card: iCard }) => {
       <h2 className="title">{card.title}</h2>
       <p className="description">{card.description}</p>
       {/* {icon && <img src={icon} alt="" />} */}
-      <img className="caption" src={card.caption} alt="" />
+      <img className="caption" src={card.caption} alt={card.altText} />
     </S.Card>
   );
 };

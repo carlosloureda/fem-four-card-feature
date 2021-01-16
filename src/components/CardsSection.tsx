@@ -12,6 +12,7 @@ const cards = [
     title: "Supervisor",
     description: "Monitors activity to identify project roadblocks",
     caption: iconSupervisor,
+    altText: "A magnifying glass",
     color: "cyan",
   },
   {
@@ -19,19 +20,22 @@ const cards = [
     description:
       "Scans our talent network to create the optimal team to your project",
     caption: iconTeamBuilder,
+    altText: "Web page with a home icon",
     color: "red",
   },
   {
     title: "Karma",
     description: "Regulary evaluates our talent to ensure quality",
-    caption: iconCalculator,
+    caption: iconkarma,
+    altText: "A light bulb",
     color: "orange",
   },
   {
     title: "Calculator",
     description:
       "Uses data from past objects to provide better delivery estimates",
-    caption: iconkarma,
+    caption: iconCalculator,
+    altText: "A calculator",
     color: "blue",
   },
 ];
