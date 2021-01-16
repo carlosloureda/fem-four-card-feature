@@ -43,14 +43,13 @@ S.Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 87px 27px 27px 27px;
+  padding: 0px 9%;
+  /* padding: 87px 27px 27px 27px; */
   .header {
     // desktop
     max-width: 540px;
-
     text-align: center;
-
-    margin-bottom: 87px;
+    margin: 60px 0px;
 
     &--title {
       font-size: 24px;
@@ -62,6 +61,11 @@ S.Section = styled.section`
         line-height: 54px;
       }
 
+      @media (max-width: 355px) {
+        font-size: 21px;
+        line-height: 36px;
+      }
+
       &__highlighted {
         font-weight: 600;
         font-size: 24px;
@@ -70,6 +74,10 @@ S.Section = styled.section`
         @media (min-width: 376px) {
           font-size: 36px;
           line-height: 54px;
+        }
+        @media (max-width: 355px) {
+          font-size: 21px;
+          line-height: 36px;
         }
       }
     }
@@ -94,7 +102,6 @@ S.CardsSection = styled.div`
   @media (min-width: 1000px) {
     display: grid;
     /* TODO: I don't like this 350px dependency, is there any "fill"/"auto" opposite word? */
-    /* grid-template-columns: 25vw minmax(auto, 350px) 25vw; */
     grid-template-columns: auto max(auto, 350px) auto;
     grid-template-rows: 50% 50%;
     column-gap: 33px;
@@ -130,10 +137,6 @@ S.CardsSection = styled.div`
       align-self: center;
     }
   }
-
-  // OTHERS
-
-  padding: 87px 27px 27px 27px;
 `;
 
 const CardsSection = () => {
