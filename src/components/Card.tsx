@@ -10,7 +10,7 @@ import styled from "@emotion/styled";
 const S: any = {};
 
 S.Card = styled.section`
-  width: 311px;
+  max-width: 311px;
   height: 222px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -26,6 +26,7 @@ S.Card = styled.section`
   @media (min-width: 376px) {
     max-width: 350px;
     height: 250px;
+    margin-bottom: 33px;
   }
 
   .title {

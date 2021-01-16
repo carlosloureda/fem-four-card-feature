@@ -83,16 +83,57 @@ S.Section = styled.section`
 `;
 
 S.CardsSection = styled.div`
+  // MOBILE
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 87px 27px 27px 27px;
 
-  @media (min-width: 376px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  // DESKTOP
+
+  /* @media (min-width: 376px) { */
+  @media (min-width: 1000px) {
+    display: grid;
+    /* TODO: I don't like this 350px dependency, is there any "fill"/"auto" opposite word? */
+    /* grid-template-columns: 25vw minmax(auto, 350px) 25vw; */
+    grid-template-columns: auto max(auto, 350px) auto;
+    grid-template-rows: 50% 50%;
+    column-gap: 33px;
+
+    .card-left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      justify-self: end;
+      align-self: center;
+    }
+    .card-above {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      justify-self: center;
+    }
+    .card-down {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      justify-self: center;
+    }
+    .card-right {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      justify-self: start;
+      align-self: center;
+    }
   }
+
+  // OTHERS
+
+  padding: 87px 27px 27px 27px;
 `;
 
 const CardsSection = () => {
@@ -111,7 +152,20 @@ const CardsSection = () => {
         </p>
       </div>
       <S.CardsSection>
-        {cards && cards.map((card) => <Card key={card.title} card={card} />)}
+        {/* {cards && cards.map((card) => <Card key={card.title} card={card} />)} */}
+
+        <div className="card-left">
+          <Card key={cards[0].title} card={cards[0]} />
+        </div>
+        <div className="card-above">
+          <Card key={cards[1].title} card={cards[1]} />
+        </div>
+        <div className="card-down">
+          <Card key={cards[2].title} card={cards[2]} />
+        </div>
+        <div className="card-right">
+          <Card key={cards[3].title} card={cards[3]} />
+        </div>
       </S.CardsSection>
     </S.Section>
   );
