@@ -1,5 +1,6 @@
 import React from "react";
 import { Global, css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 import CardsSection from "./components/CardsSection";
 import colors from "./theme/colors";
@@ -19,11 +20,38 @@ const GlobalStyles = css`
   }
 `;
 
+const S: any = {};
+S.Footer = styled.footer`
+  background-color: violet;
+  text-align: center;
+  padding: 2px;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+  .attribution {
+    color: white;
+    a {
+      color: white;
+      font-weight: bold;
+    }
+  }
+`;
+
 function App() {
   return (
     <>
       <Global styles={GlobalStyles} />
       <CardsSection />
+      <S.Footer>
+        <p className="attribution">
+          Built by Carlos Loureda on{" "}
+          <a href="https://www.twitch.tv/balanze">Twitch</a> for{" "}
+          <a href="https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK">
+            FrontendMentor
+          </a>
+          .
+        </p>
+      </S.Footer>
     </>
   );
 }
