@@ -1,7 +1,6 @@
 //rsc
 import React from "react";
 import styled from "@emotion/styled";
-import colors from "../theme/colors";
 
 // import iconCalculator from "../images/icon-calculator.svg";
 // import iconkarma from "../images/icon-karma.svg";
